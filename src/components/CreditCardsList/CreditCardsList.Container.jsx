@@ -1,7 +1,7 @@
 import CreditCardsListComponent from './CreditCardsList.Component';
 
-const CreditCardsListContainer = () => {
-    return <CreditCardsListComponent />
+const CreditCardsListContainer = (props) => {
+    return <CreditCardsListComponent {...props}/>
 };
 
 export default CreditCardsListContainer;

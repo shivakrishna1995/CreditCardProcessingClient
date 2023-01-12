@@ -38,7 +38,7 @@ const AddCreditCardComponent = ({
                                 </FormGroup>
                                 
                                 <FormGroup className='mb-3'>
-                                    <Form.Label>cardNumber</Form.Label>
+                                    <Form.Label>Card Number</Form.Label>
                                     <Form.Control 
                                         type='text'
                                         name='cardNumber'

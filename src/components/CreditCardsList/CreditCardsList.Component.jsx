@@ -1,7 +1,9 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 
-const CreditCardsListComponent = () => {
+const CreditCardsListComponent = ({
+    cards
+}) => {
     return (
         <div className='mt-4 fs-5'>
             <p>Existing Cards</p>
@@ -15,18 +17,16 @@ const CreditCardsListComponent = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td className='small'>Alice</td>
-                        <td className='small'>2323 3433 6567 2323</td>
-                        <td className='small'>£100</td>
-                        <td className='small'>£2000</td>
-                    </tr>
-                    <tr>
-                        <td className='small'>Bob</td>
-                        <td className='small'>2323 3433 6567 2323</td>
-                        <td className='small'>£100</td>
-                        <td className='small'>£2000</td>
-                    </tr>
+                    {
+                        cards?.map?.(card => (
+                            <tr key={card?.id}>
+                                <td className='small'>{card?.name}</td>
+                                <td className='small'>{card?.card_number}</td>
+                                <td className='small'>£{card?.balance}</td>
+                                <td className='small'>£{card?.card_limit}</td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </Table>
         </div>
